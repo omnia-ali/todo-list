@@ -1,0 +1,244 @@
+<mat-toolbar class="header">
+  <div class="headertoggel d-flex justify-content-between"
+  [ngStyle]="{'background-color': sidenav.opened? '#678bad':'#4d708e'}">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <button mat-icon-button >
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+  <div class="header-text">
+    Today
+  </div>
+</mat-toolbar>
+<mat-sidenav-container class="div-container">
+  <mat-sidenav #sidenav mode="side" opened class="sidenav" fixedInViewport="false">
+    <mat-expansion-panel class="profile-btn">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <img class="navprofile-img" src="/assets/imgs/customer1.jpg" alt="">
+          Personal data
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+
+      <mat-form-field appearance="fill">
+        <mat-label>First name</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input matInput type="number" min="1">
+      </mat-form-field>
+    </mat-expansion-panel>
+
+    <mat-list role="list">
+      <mat-list-item role="listitem">    <mat-icon mat-list-icon>home</mat-icon>
+         Home</mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-icon mat-list-icon>list</mat-icon>
+        All</mat-list-item>
+      <mat-list-item role="listitem">
+        <mat-icon mat-list-icon>today</mat-icon>
+        Today</mat-list-item>
+        <mat-list-item role="listitem">
+          <mat-icon mat-list-icon>calendar_today</mat-icon>
+          Week</mat-list-item>
+          <mat-list-item role="listitem">
+            <mat-icon mat-list-icon>task_alt</mat-icon>
+            Done</mat-list-item>
+            <mat-list-item role="listitem">
+              <mat-icon mat-list-icon>delete_outline</mat-icon>
+              Deleted</mat-list-item>
+              <mat-list-item role="listitem">
+                <mat-icon mat-list-ico-outlined>
+
+                  folder</mat-icon>
+                Group</mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="container-fluid">
+      <div class="title-div pt-3">
+        <span class="align-self-end">Filter by</span>
+        <button mat-button class="btn main-btn ">
+          <span class="material-icons"> add_circle_outline </span> New tasks</button>
+      </div>
+      <div class="row group-div white-form   mat-elevation-z2">
+        <div class="col-2">
+          <label for="">Date</label>
+          <input type="text" class="form-control input-control">
+        </div>
+        <div class="col-2">
+          <label for="">Title</label>
+          <input type="text" class="form-control input-control">
+
+        </div>
+        <div class="col-2">
+          <label for="">Group</label>
+          <select type="text" class="form-select input-control  mb-3">
+            <option></option>
+            <option>Group 1</option>
+            <option>Group 2</option>
+          </select>
+
+        </div>
+      </div>
+
+      <div class="title-div mt-2">
+        <span class="align-self-end group-span">Group 1</span>
+        <div>
+          <button mat-button class="btn main-btn me-1" disabled>
+            <i class="fa fa-trash-o  " aria-hidden="true"></i>Delete selected</button>
+
+          <button mat-button class="btn main-btn" disabled>
+
+            <i class="fa fa-check" aria-hidden="true"></i> Done</button>
+        </div>
+      </div>
+      <div class="row  group-div  p-1 m-1">
+        <ul class="list-group  p-0 m-0" style="width: 100%;">
+          <li class="list-group-item   mat-elevation-z2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Coffee
+              </label>
+            </div>
+            <div class="icon-div  ms-auto ">
+              <button  mat-mini-fab class="me-3">
+                <i class="fa fa-trash-o  fa-2x" aria-hidden="true"></i>
+              </button>
+              <button  mat-mini-fab >
+                <i class="fa fa-check  fa-2x" aria-hidden="true"></i>
+              </button>
+            </div>
+          </li>
+          <li class="list-group-item   mat-elevation-z2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Milk
+              </label>
+            </div>
+            <div class="icon-div  ms-auto ">
+              <button  mat-mini-fab class="me-3">
+                <i class="fa fa-trash-o  fa-2x" aria-hidden="true"></i>
+              </button>
+              <button  mat-mini-fab>
+                <i class="fa fa-check  fa-2x" aria-hidden="true"></i>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+
+      <div class="title-div mt-2">
+        <span class="align-self-end group-span">Group 2</span>
+
+      </div>
+      <div class="row  group-div  p-1 m-1">
+        <ul class="list-group  p-0 m-0" style="width: 100%;">
+          <li class="list-group-item   mat-elevation-z2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Coffee
+              </label>
+            </div>
+            <div class="icon-div  ms-auto ">
+              <button  mat-mini-fab class="me-3">
+                <i class="fa fa-trash-o  fa-2x" aria-hidden="true"></i>
+              </button>
+              <button  mat-mini-fab >
+                <i class="fa fa-check  fa-2x" aria-hidden="true"></i>
+              </button>
+            </div>
+          </li>
+          <li class="list-group-item   mat-elevation-z2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Milk
+              </label>
+            </div>
+            <div class="icon-div  ms-auto ">
+              <button  mat-mini-fab class="me-3">
+                <i class="fa fa-trash-o  fa-2x" aria-hidden="true"></i>
+              </button>
+              <button  mat-mini-fab>
+                <i class="fa fa-check  fa-2x" aria-hidden="true"></i>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="title-div mt-2">
+        <span class="align-self-end group-span">Our Home todo list</span>
+
+      </div>
+      <div class="row  group-div  p-1 m-1">
+        <ul class="list-group  p-0 m-0" style="width: 100%;">
+          <li class="list-group-item   mat-elevation-z2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Coffee
+              </label>
+            </div>
+            <div class="icon-div  ms-auto ">
+              <button  mat-mini-fab class="me-3">
+                <i class="fa fa-trash-o  fa-2x" aria-hidden="true"></i>
+              </button>
+              <button  mat-mini-fab >
+                <i class="fa fa-check  fa-2x" aria-hidden="true"></i>
+              </button>
+            </div>
+          </li>
+          <li class="list-group-item   mat-elevation-z2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Milk
+              </label>
+            </div>
+            <div class="icon-div  ms-auto ">
+              <button  mat-mini-fab class="me-3">
+                <i class="fa fa-trash-o  fa-2x" aria-hidden="true"></i>
+              </button>
+              <button  mat-mini-fab>
+                <i class="fa fa-check  fa-2x" aria-hidden="true"></i>
+              </button>
+            </div>
+          </li>
+
+          <li class="list-group-item   mat-elevation-z2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Milk
+              </label>
+            </div>
+            <div class="icon-div  ms-auto ">
+              <button  mat-mini-fab class="me-3">
+                <i class="fa fa-trash-o  fa-2x" aria-hidden="true"></i>
+              </button>
+              <button  mat-mini-fab>
+                <i class="fa fa-check  fa-2x" aria-hidden="true"></i>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!-- <router-outlet></router-outlet> -->
